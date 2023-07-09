@@ -1,4 +1,4 @@
-import { SafeAreaView, StatusBar } from 'react-native'
+import { StatusBar } from 'react-native'
 import { Groups } from '@screens/Groups'
 import { ThemeProvider } from 'styled-components'
 import { theme } from '@theme/index'
