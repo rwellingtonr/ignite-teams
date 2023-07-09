@@ -40,5 +40,6 @@ module.exports = {
     'linebreak-style': ['error', 'unix'],
     quotes: ['warn', 'single'],
     semi: ['warn', 'never'],
+    '@typescript-eslint/no-empty-interface': 'off',
   },
 }
