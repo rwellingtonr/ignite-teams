@@ -26,7 +26,6 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint', 'prettier'],
   rules: {
-    'no-undef': 'off',
     'prettier/prettier': [
       'warn',
       {
@@ -39,15 +38,16 @@ module.exports = {
       },
     ],
     indent: ['error', 2],
-    'no-self-assign': 'error',
-    'no-func-assign': 'error',
     eqeqeq: ['error', 'always'],
+    quotes: ['warn', 'single'],
+    semi: ['warn', 'never'],
+    'no-self-assign': 'error',
+    'no-undef': 'off',
+    'no-func-assign': 'error',
     'no-duplicate-imports': 'error',
     'react/react-in-jsx-scope': 'off',
     'react/no-unstable-nested-components': 'off',
     'linebreak-style': ['error', 'unix'],
-    quotes: ['warn', 'single'],
-    semi: ['warn', 'never'],
     '@typescript-eslint/no-empty-interface': 'off',
   },
 }
