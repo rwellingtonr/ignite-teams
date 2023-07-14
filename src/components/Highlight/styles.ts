@@ -1,4 +1,4 @@
-import { styled } from 'styled-components/native'
+import { css, styled } from 'styled-components/native'
 
 export const HighlightContainer = styled.View`
   width: 100%;
@@ -6,14 +6,18 @@ export const HighlightContainer = styled.View`
 `
 
 export const Title = styled.Text`
-  font-size: ${(props) => props.theme.fontSize.xl};
-  font-family: ${(props) => props.theme.fontFamily.bold};
+  ${(props) => css`
+    font-size: ${props.theme.fontSize.xl};
+    font-family: ${props.theme.fontFamily.bold};
+    color: ${props.theme.colors.white};
+  `}
   text-align: center;
-  color: ${(props) => props.theme.colors.white};
 `
 export const Subtitle = styled.Text`
-  font-size: ${(props) => props.theme.fontSize.md};
-  font-family: ${(props) => props.theme.fontFamily.regular};
+  ${(props) => css`
+    font-size: ${props.theme.fontSize.md};
+    font-family: ${props.theme.fontFamily.regular};
+    color: ${props.theme.colors.gray[300]};
+  `}
   text-align: center;
-  color: ${(props) => props.theme.colors.gray[300]};
 `

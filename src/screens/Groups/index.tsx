@@ -5,7 +5,7 @@ import { Header } from '@components/Header'
 import { Highlight } from '@components/Highlight'
 import { useState } from 'react'
 import { FlatList } from 'react-native'
-import { GroupsContainer } from './styles'
+import { ButtonWrapper, GroupsContainer } from './styles'
 
 export function Groups() {
   const [groups, setGroups] = useState<string[]>(['hey'])
@@ -22,7 +22,9 @@ export function Groups() {
         contentContainerStyle={groups?.length === 0 && { flex: 1 }}
         ListEmptyComponent={() => <EmptyList message="Que tal cadastrar a primeira turma?" />}
       />
-      <Button label="Criar nova turma" variant="primary" />
+      <ButtonWrapper>
+        <Button label="Criar nova turma" variant="primary" />
+      </ButtonWrapper>
     </GroupsContainer>
   )
 }

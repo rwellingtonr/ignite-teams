@@ -1,5 +1,5 @@
 import { TouchableOpacityProps } from 'react-native'
-import { ButtonAction, ButtonContainer, ButtonLabel, type Variants } from './styles'
+import { ButtonAction, ButtonLabel, type Variants } from './styles'
 
 interface ButtonProps extends TouchableOpacityProps {
   variant: Variants
@@ -7,10 +7,8 @@ interface ButtonProps extends TouchableOpacityProps {
 }
 export function Button({ label, ...props }: ButtonProps) {
   return (
-    <ButtonContainer>
-      <ButtonAction {...props}>
-        <ButtonLabel>{label}</ButtonLabel>
-      </ButtonAction>
-    </ButtonContainer>
+    <ButtonAction {...props}>
+      <ButtonLabel>{label}</ButtonLabel>
+    </ButtonAction>
   )
 }

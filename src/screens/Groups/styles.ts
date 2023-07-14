@@ -5,3 +5,8 @@ export const GroupsContainer = styled.View`
   background-color: ${(props) => props.theme.colors.gray[500]};
   color: ${(props) => props.theme.colors.gray[100]};
 `
+export const ButtonWrapper = styled.View`
+  width: 90%;
+  justify-content: center;
+  align-self: center;
+`
