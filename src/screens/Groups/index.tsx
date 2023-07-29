@@ -6,9 +6,14 @@ import { Highlight } from '@components/Highlight'
 import { useState } from 'react'
 import { FlatList } from 'react-native'
 import { ButtonWrapper, GroupsContainer } from './styles'
+import { useNavigation } from '@react-navigation/native'
 
 export function Groups() {
-  const [groups, setGroups] = useState<string[]>(['hey'])
+  const [groups, setGroups] = useState<string[]>([])
+
+  const { navigate } = useNavigation()
+
+  const handleCreateNewGroup = () => navigate('new-group')
 
   return (
     <GroupsContainer>
@@ -23,7 +28,7 @@ export function Groups() {
         ListEmptyComponent={() => <EmptyList message="Que tal cadastrar a primeira turma?" />}
       />
       <ButtonWrapper>
-        <Button label="Criar nova turma" variant="primary" />
+        <Button label="Criar nova turma" variant="primary" onPress={handleCreateNewGroup} />
       </ButtonWrapper>
     </GroupsContainer>
   )

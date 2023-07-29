@@ -15,6 +15,7 @@ export const ButtonAction = styled(TouchableOpacity)<ButtonVariantProps>`
   align-items: center;
   background-color: ${({ theme, variant }) =>
     variant === 'primary' ? theme.colors.green[700] : theme.colors.red[700]};
+  opacity: ${(props) => (props.disabled ? 0.4 : 1)};
 `
 
 export const ButtonLabel = styled.Text`
