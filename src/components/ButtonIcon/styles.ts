@@ -11,7 +11,7 @@ type ButtonIconProps = {
 export const ButtonIconContainer = styled(TouchableOpacity)`
   width: 56px;
   height: 56px;
-
+  opacity: ${(props) => (props?.disabled ? 0.4 : 1)};
   justify-content: center;
   align-items: center;
   margin-left: 12px;
